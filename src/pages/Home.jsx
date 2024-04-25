@@ -1,10 +1,10 @@
-import Navbar from "../components/Header/Navbar";
+
 
 
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
+           <h2>This is Home Page</h2>
         </div>
     );
 };
