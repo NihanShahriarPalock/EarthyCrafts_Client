@@ -1,6 +1,9 @@
+import { toast } from "react-toastify";
+import UseAuth from "../hooks/UseAuth";
 
 
 const AddCraft = () => {
+  const { user } = UseAuth() || {};
   const handleAddCraft = (e) => {
       e.preventDefault();
       const form = e.target;
@@ -12,9 +15,11 @@ const AddCraft = () => {
       const rating = form.rating.value;
       const customization = form.customization.value;
       const processing_time = form.processing_time.value;
-      const stockStatus = form.stockStatus.value;
-      const useremail = form.useremail.value;
-      const username = form.username.value;
+    const stockStatus = form.stockStatus.value;
+    const email = user.email;
+    const displayName = user.displayName;
+    
+      
 
       const newCraft = {
         image,
@@ -23,7 +28,11 @@ const AddCraft = () => {
         short_description,
         price,
         rating,
-          customization, processing_time, stockStatus, useremail, username
+        customization,
+        processing_time,
+        stockStatus,
+        email,
+        displayName,
       };
       console.log(newCraft);
       fetch('http://localhost:5000/addcraft', {
@@ -36,6 +45,10 @@ const AddCraft = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
+             if (data?.insertedId) {
+               toast.success("Data Inserted")
+          }
+          form.reset();
         }); 
 
   };
@@ -124,24 +137,8 @@ const AddCraft = () => {
             name='stockStatus'
           />
         </div>
-        <div>
-          username
-          <input
-            type='text'
-            placeholder='username'
-            className='input input-bordered '
-            name='username'
-          />
-        </div>
-        <div>
-          useremail
-          <input
-            type='text'
-            placeholder='email'
-            className='input input-bordered '
-            name='useremail'
-          />
-        </div>
+    
+    
         <div>
        
           <input className="btn btn-primary" type='submit' value='Submit' />

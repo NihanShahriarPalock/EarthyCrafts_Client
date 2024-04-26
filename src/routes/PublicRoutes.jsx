@@ -35,18 +35,19 @@ export const router = createBrowserRouter([
       {
         path: "/AddCraft",
         element: (
-          // <PrivateRoutes>
-          //   <AddCraft></AddCraft>
-          // </PrivateRoutes>
-          <AddCraft></AddCraft>
+          <PrivateRoutes>
+            <AddCraft></AddCraft>
+          </PrivateRoutes>
+          // <AddCraft></AddCraft>
         ),
       },
       {
         path: "/MyCraft",
         element: (
-          <PrivateRoutes>
-            <MyCraft></MyCraft>
-          </PrivateRoutes>
+          // <PrivateRoutes>
+          //   <MyCraft></MyCraft>
+          // </PrivateRoutes>
+           <MyCraft></MyCraft>
         ),
       },
     ],
