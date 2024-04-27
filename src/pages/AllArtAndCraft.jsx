@@ -1,5 +1,5 @@
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllArtAndCraft = () => {
   const crafts = useLoaderData();
@@ -27,7 +27,7 @@ const AllArtAndCraft = () => {
                 <td className='border px-4 py-2'>{craft.price}</td>
                 <td className='border px-4 py-2'>{craft.ratings}</td>
                 <td className='border px-4 py-2'>
-                  <button>View Details</button>
+                  <Link to={`/crafts/${craft._id}`} ><p className="btn btn-primary">View Details</p></Link>
                 </td>
               </tr>
             ))}

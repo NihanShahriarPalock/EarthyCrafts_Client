@@ -12,7 +12,7 @@ import {
 import PropTypes from "prop-types";
 import auth from "./FirebaseConfig";
 
-// create a context
+
 export const AuthContext = createContext(null);
 
 // fireBase provider
@@ -53,15 +53,15 @@ const AuthContextProvider = ({ children }) => {
   // update profile
   const updateUserProfile = (obj) => {
     setLoading(true);
-    // return updateProfile(auth.currentUser, obj)
+    
     return updateProfile(auth.currentUser, obj);
   };
 
-  // use observer to check user state
+  // use observer 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("Inner subscribe 4");
-      console.log(user);
+     
+      // console.log(user);
       setLoading(false);
       setUser(currentUser);
     });

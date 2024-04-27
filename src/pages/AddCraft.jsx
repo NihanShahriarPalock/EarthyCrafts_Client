@@ -1,56 +1,53 @@
 import { toast } from "react-toastify";
 import UseAuth from "../hooks/UseAuth";
 
-
 const AddCraft = () => {
   const { user } = UseAuth() || {};
+
   const handleAddCraft = (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const image = form.image.value;
-      const item_name = form.item_name.value;
-      const subcategory_Name = form.subcategory_Name.value;
-      const short_description = form.short_description.value;
-      const price = form.price.value;
-      const rating = form.rating.value;
-      const customization = form.customization.value;
-      const processing_time = form.processing_time.value;
+    e.preventDefault();
+    const form = e.target;
+    const image = form.image.value;
+    const item_name = form.item_name.value;
+    const subcategory_Name = form.subcategory_Name.value;
+    const short_description = form.short_description.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const customization = form.customization.value;
+    const processing_time = form.processing_time.value;
     const stockStatus = form.stockStatus.value;
     const email = user.email;
     const displayName = user.displayName;
-    
-      
 
-      const newCraft = {
-        image,
-        item_name,
-        subcategory_Name,
-        short_description,
-        price,
-        rating,
-        customization,
-        processing_time,
-        stockStatus,
-        email,
-        displayName,
-      };
-      console.log(newCraft);
-      fetch('http://localhost:5000/addcraft', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(newCraft)
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-             if (data?.insertedId) {
-               toast.success("Data Inserted")
-          }
-          form.reset();
-        }); 
-
+    const newCraft = {
+      image,
+      item_name,
+      subcategory_Name,
+      short_description,
+      price,
+      rating,
+      customization,
+      processing_time,
+      stockStatus,
+      email,
+      displayName,
+    };
+    console.log(newCraft);
+    fetch("http://localhost:5000/addcraft", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newCraft),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data?.insertedId) {
+          alert("Data Inserted");
+        }
+        form.reset();
+      });
   };
   return (
     <div>
@@ -137,11 +134,9 @@ const AddCraft = () => {
             name='stockStatus'
           />
         </div>
-    
-    
+
         <div>
-       
-          <input className="btn btn-primary" type='submit' value='Submit' />
+          <input className='btn btn-primary' type='submit' value='Submit' />
         </div>
       </form>
     </div>

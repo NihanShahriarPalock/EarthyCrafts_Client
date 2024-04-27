@@ -8,6 +8,8 @@ import AllArtAndCraft from "../pages/AllArtAndCraft";
 import AddCraft from "../pages/AddCraft";
 import PrivateRoutes from "./PrivateRoutes";
 import MyCraft from "../pages/MyCraft";
+import ViewDetails from "../pages/ViewDetails";
+import UpdateCraft from "../pages/UpdateCraft";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,15 @@ export const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
       },
       {
+        path: "/crafts/:id",
+        element: (
+          <PrivateRoutes>
+            <ViewDetails></ViewDetails>
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
+      },
+      {
         path: "/AddCraft",
         element: (
           <PrivateRoutes>
@@ -41,13 +52,23 @@ export const router = createBrowserRouter([
           // <AddCraft></AddCraft>
         ),
       },
+
       {
         path: "/MyCraft",
         element: (
           // <PrivateRoutes>
           //   <MyCraft></MyCraft>
           // </PrivateRoutes>
-           <MyCraft></MyCraft>
+          <MyCraft></MyCraft>
+        ),
+      },
+      {
+        path: "/updateCraft/:id",
+        element: (
+          // <PrivateRoutes>
+          //   <UpdateCraft></UpdateCraft>
+          // </PrivateRoutes>
+          <UpdateCraft></UpdateCraft>
         ),
       },
     ],
