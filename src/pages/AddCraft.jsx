@@ -66,7 +66,7 @@ const AddCraft = () => {
           item_name
           <input
             type='text'
-            placeholder='item_name'
+            placeholder='Enter item name'
             className='input input-bordered '
             name='item_name'
           />
@@ -75,7 +75,7 @@ const AddCraft = () => {
           subcategory_Name
           <input
             type='text'
-            placeholder='subcategory_Name'
+            placeholder='Enter subcategory Name'
             className='input input-bordered '
             name='subcategory_Name'
           />
