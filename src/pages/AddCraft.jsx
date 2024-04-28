@@ -1,6 +1,6 @@
 // import { toast } from "react-toastify";
 import UseAuth from "../hooks/UseAuth";
-import { toast, ToastBar } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const AddCraft = () => {
   const { user } = UseAuth() || {};
