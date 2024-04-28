@@ -3,6 +3,7 @@ import { CirclesWithBar } from "react-loader-spinner";
 import "../App.css";
 import HeroSlider from "../components/Header/HeroSlider";
 import Partner from "../components/Body/Partner";
+import MeetTeam from "../components/Body/MeetTeam";
 
 const Home = () => {
     const [loadingScreen, setLoadingScreen] = useState();
@@ -33,6 +34,7 @@ const Home = () => {
           <>
             
               <HeroSlider></HeroSlider>
+              <MeetTeam></MeetTeam>
               <Partner></Partner>
           </>
         )}
