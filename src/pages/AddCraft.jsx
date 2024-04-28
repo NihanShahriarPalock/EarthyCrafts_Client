@@ -1,5 +1,7 @@
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import UseAuth from "../hooks/UseAuth";
+import { toast,ToastBar } from "react-hot-toast";
+
 
 const AddCraft = () => {
   const { user } = UseAuth() || {};
@@ -44,7 +46,7 @@ const AddCraft = () => {
       .then((data) => {
         console.log(data);
         if (data?.insertedId) {
-          alert("Data Inserted");
+           toast.success(`${item_name} is inserted`);
         }
         form.reset();
       });

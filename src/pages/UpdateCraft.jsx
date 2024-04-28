@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState  } from "react";
+import {  Navigate, useParams } from "react-router-dom";
 
 const UpdateCraft = () => {
   const { id } = useParams();
-    console.log(id);
+    const [craft, setCraft] = useState({});
+    
 
-     const [craft, setCraft] = useState({});
-
-     console.log(id);
-     useEffect(() => {
-       fetch(`http://localhost:5000/singleCraft/${id}`)
-         .then((res) => res.json())
-         .then((data) => {
-           setCraft(data);
-         });
-     }, [id]);
-
+  useEffect(() => {
+    fetch(`http://localhost:5000/singleCraft/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCraft(data);
+      });
+  }, [id]);
 
   const handleUpdateCraft = (e) => {
     e.preventDefault();
@@ -23,11 +20,12 @@ const UpdateCraft = () => {
     const rating = e.target.rating.value;
     const info = { price, rating };
     console.log(info);
-       fetch(`http://localhost:5000/updateCraft/${id}`, {
-         method: "PUT",
-         headers: { "Content-type": "application/json" },
-         body: JSON.stringify(info),
-       });
+    fetch(`http://localhost:5000/updateCraft/${id}`, {
+      method: "PUT",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(info),
+    });
+     <Navigate to="/"></Navigate>
   };
 
   return (
@@ -41,18 +39,18 @@ const UpdateCraft = () => {
           className='input input-bordered'
           type='text'
           name='price'
-                  id=''
-                  defaultValue={craft.price}
+          id=''
+          defaultValue={craft.price}
         />
         Rating{" "}
         <input
           className='input input-bordered'
           type='text'
           name='rating'
-                  id=''
-                  defaultValue={craft.rating}
+          id=''
+          defaultValue={craft.rating}
         />
-        <input className="btn btn-primary" type='submit' value='Submit' />
+        <input className='btn btn-primary' type='submit' value='Submit' />
       </form>
     </div>
   );
