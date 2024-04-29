@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllArtAndCraft = () => {
@@ -9,6 +10,9 @@ const AllArtAndCraft = () => {
 
   return (
     <div className='container mx-auto px-4 py-8 bg-slate-50'>
+      <Helmet>
+        <title>Earthly | All Product</title>
+      </Helmet>
       <h2 className='text-2xl font-bold mb-4 text-center text-black py-4'>
         All Art and Craft Items
       </h2>

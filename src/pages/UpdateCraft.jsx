@@ -2,6 +2,7 @@ import { useEffect, useState  } from "react";
 import {  useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const UpdateCraft = () => {
   const { id } = useParams();
     const [craft, setCraft] = useState({});
@@ -72,11 +73,13 @@ const UpdateCraft = () => {
 
   return (
     <div className='w-full lg:w-3/4  mx-auto my-10'>
+      <Helmet>
+        <title>Earthly | Update</title>
+      </Helmet>
       <h1 className='text-center font-semibold text-3xl mb-10'>Update Craft</h1>
       <form
         className='grid grid-cols-1 md:grid-cols-2 gap-3  shadow-lg p-2 lg:p-6 border-2 border-gray-200'
         onSubmit={handleUpdateCraft}>
-        
         <div className='flex flex-col gap-1'>
           <label className='font-semibold'>
             Image url <span className='text-red-500'>&#42;</span>
@@ -100,7 +103,7 @@ const UpdateCraft = () => {
             defaultValue={craft.item_name}
             name='item_name'
             type='text'
-            />
+          />
         </div>
 
         <div className='flex flex-col gap-1'>

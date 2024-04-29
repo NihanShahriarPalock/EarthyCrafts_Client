@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import Spinner from "../components/Spinner";
 import UseAuth from "../hooks/UseAuth";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -73,6 +74,9 @@ const Login = () => {
 
   return (
     <div className='gadgetContainer'>
+      <Helmet>
+        <title>Earthly | Login</title>
+      </Helmet>
       {loading && <Spinner />}
       <div className='flex md:justify-between items-center justify-center flex-wrap gap-4'>
         {/* <img className='h-[100px]' src={logo} alt='' /> */}
@@ -100,8 +104,8 @@ const Login = () => {
             //   background: `url(${signIn})`,
             //   backgroundSize: "100% 100%",
             //   backgroundOrigin: "content-box",
-                  // }}
-                  >
+            // }}
+          >
             <p className='font-bold text-3xl mt-20 mx-6'>
               We Offer the <br />
               Best Products

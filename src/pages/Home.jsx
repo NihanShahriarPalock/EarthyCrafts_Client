@@ -5,6 +5,7 @@ import HeroSlider from "../components/Header/HeroSlider";
 import Partner from "../components/Body/Partner";
 import MeetTeam from "../components/Body/MeetTeam";
 import CraftItemsSection from "../components/Body/CraftItemsSection";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const [loadingScreen, setLoadingScreen] = useState();
@@ -16,6 +17,9 @@ const Home = () => {
     },[])
     return (
       <div>
+        <Helmet>
+          <title>Earthly | Home</title>
+        </Helmet>
         {loadingScreen ? (
           <div className='loadingScreenSpinner'>
             <CirclesWithBar
@@ -33,11 +37,10 @@ const Home = () => {
           </div>
         ) : (
           <>
-            
-              <HeroSlider></HeroSlider>
-              <CraftItemsSection></CraftItemsSection>
-              <MeetTeam></MeetTeam>
-              <Partner></Partner>
+            <HeroSlider></HeroSlider>
+            <CraftItemsSection></CraftItemsSection>
+            <MeetTeam></MeetTeam>
+            <Partner></Partner>
           </>
         )}
       </div>

@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet-async";
 
 
 const ErrorPage = () => {
     return (
-        <div>
-            <h2>Error</h2>
-        </div>
+      <div>
+        <Helmet>
+          <title>Earthly | Error</title>
+        </Helmet>
+        <h2>Error</h2>
+      </div>
     );
 };
 

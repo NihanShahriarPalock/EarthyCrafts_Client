@@ -10,7 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import MyCraft from "../pages/MyCraft";
 import ViewDetails from "../pages/ViewDetails";
 import UpdateCraft from "../pages/UpdateCraft";
-import CraftItemsSection from "../components/Body/CraftItemsSection";
+
 
 export const router = createBrowserRouter([
   {

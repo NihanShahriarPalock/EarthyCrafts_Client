@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import { toast, Toaster } from "react-hot-toast"; 
 import Spinner from "../components/Spinner";
 import UseAuth from "../hooks/UseAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const Registration = () => {
@@ -95,6 +96,9 @@ const Registration = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Earthly | Registration</title>
+      </Helmet>
       {loading && <Spinner />}
 
       <div className='gadgetContainer pb-10'>

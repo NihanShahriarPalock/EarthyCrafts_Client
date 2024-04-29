@@ -3,6 +3,7 @@ import UseAuth from "../hooks/UseAuth";
 import Swal from "sweetalert2";
 import {  NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const MyCraft = () => {
   const [crafts, setCrafts] = useState([]);
@@ -64,6 +65,9 @@ const MyCraft = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Earthly | My Added Craft</title>
+      </Helmet>
       <h2 className='my-10 text-center font-bold text-2xl lg:text-4xl'>
         My Added Craft Product List
       </h2>

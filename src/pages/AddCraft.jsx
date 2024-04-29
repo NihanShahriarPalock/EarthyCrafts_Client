@@ -1,4 +1,5 @@
 // import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 import UseAuth from "../hooks/UseAuth";
 import { toast } from "react-hot-toast";
 
@@ -52,6 +53,9 @@ const AddCraft = () => {
   };
   return (
     <div className='w-full lg:w-3/4  mx-auto'>
+      <Helmet>
+        <title>Earthly | Add Craft</title>
+      </Helmet>
       <h2 className='my-5 text-center font-bold text-2xl md:text-4xl '>
         Add A New Item
       </h2>

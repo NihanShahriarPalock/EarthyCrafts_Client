@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 
 const ViewDetails = () => {
@@ -15,6 +16,9 @@ const ViewDetails = () => {
   }, [id]);
   return (
     <>
+      <Helmet>
+        <title>Earthly | Details</title>
+      </Helmet>
       <div className='flex flex-col md:flex-row gap-4 mt-6 p-6'>
         <div className='w-full md:w-1/2 flex justify-center items-center'>
           <img
