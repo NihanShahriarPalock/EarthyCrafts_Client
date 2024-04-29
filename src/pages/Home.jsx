@@ -4,6 +4,7 @@ import "../App.css";
 import HeroSlider from "../components/Header/HeroSlider";
 import Partner from "../components/Body/Partner";
 import MeetTeam from "../components/Body/MeetTeam";
+import CraftItemsSection from "../components/Body/CraftItemsSection";
 
 const Home = () => {
     const [loadingScreen, setLoadingScreen] = useState();
@@ -34,6 +35,7 @@ const Home = () => {
           <>
             
               <HeroSlider></HeroSlider>
+              <CraftItemsSection></CraftItemsSection>
               <MeetTeam></MeetTeam>
               <Partner></Partner>
           </>
