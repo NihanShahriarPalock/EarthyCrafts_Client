@@ -10,7 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import MyCraft from "../pages/MyCraft";
 import ViewDetails from "../pages/ViewDetails";
 import UpdateCraft from "../pages/UpdateCraft";
-
+import ArtCraftSection from "../components/Body/ArtCraftSection";
 
 export const router = createBrowserRouter([
   {
@@ -61,6 +61,10 @@ export const router = createBrowserRouter([
             <MyCraft></MyCraft>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/ArtCraftSection/:subcategory_Name",
+        element: <ArtCraftSection></ArtCraftSection>,
       },
       {
         path: "/updateCraft/:id",

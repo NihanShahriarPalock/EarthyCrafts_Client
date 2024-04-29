@@ -4,8 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const AllArtAndCraft = () => {
   const crafts = useLoaderData();
-
-  // Slice the crafts array to only include the first 2 items
   const limitedCrafts = crafts.slice(0, 2);
 
   return (

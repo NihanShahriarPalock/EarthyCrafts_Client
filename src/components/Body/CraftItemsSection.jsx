@@ -8,7 +8,7 @@ const CraftItemSection = () => {
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:5000/AllArtAndCraft");
-        const data = await response.json();       
+        const data = await response.json();
         const slicedCrafts = data.slice(0, 6);
         setLimitedCrafts(slicedCrafts);
       } catch (error) {
@@ -20,13 +20,12 @@ const CraftItemSection = () => {
   }, []);
 
   return (
-    <div className='container mx-auto px-4 py-8 bg-slate-50'>
+    <div className='my-5 container mx-auto px-4 py-8 bg-slate-50'>
       <h2 className='text-2xl font-bold mb-4 text-center text-black py-4'>
-         Art and  Craft Items
+        Art and Craft Items
       </h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {limitedCrafts.map((craft, index) => (
-     
           <div key={index} className='relative mx-auto w-full'>
             <div className='shadow-md p-4 rounded-lg bg-white'>
               <div className='flex justify-center relative rounded-lg overflow-hidden h-52'>
@@ -38,23 +37,23 @@ const CraftItemSection = () => {
                   />
                 </div>
               </div>
-              <div className='space-y-3'>
-                <h3 className='text-xl font-semibold'>{craft.item_name}</h3>
-                <p className='text-gray-600'>
-                  Sub Category Name: {craft.subcategory_Name}
+              <div className='space-y-3 text-gray-800'>
+                <p className='text-lg font-semibold'>{craft.item_name}</p>
+                <p className=''>
+                  Sub Category Name : {craft.subcategory_Name}
                 </p>
-                <p className='text-gray-600'>Stock Status : {craft.stockStatus}</p>
-
-                <div className='flex justify-between'>
-                  <p className='text-lg text-blue-500  font-semibold '>
-                    Price : {craft.price}
-                  </p>
-                  <p className='text-lg text-blue-500  font-semibold'>
-                    Rating : {craft.rating}
-                  </p>
-                </div>
+                <p className=''>
+                  Stock Status :
+                   <span className='italic'> {craft.stockStatus} </span>
+                </p>
+                <p className=' '>
+                  Price : <span className='italic'>{craft.price} </span>
+                </p>
+                <p className='  '>
+                  Rating : <span className='italic'>{craft.rating}</span>
+                </p>
                 <p className='flex items-center'>
-                  <span className='text-gray-600 mr-1'>Customization : </span>
+                  <span className=' mr-1'>Customization : </span>
                   <span
                     className={`${
                       craft.customization === "yes"
@@ -64,14 +63,11 @@ const CraftItemSection = () => {
                     {craft.customization}
                   </span>
                 </p>
-
-                <div className='flex gap-2'>
+                <div className='flex gap-2 w-full btn border border-blue-500'>
                   <Link to={`/crafts/${craft._id}`}>
-                   
-                    <p className='text-blue-500 font-bold  flex justify-center items-center'>
-                       View Details 
+                    <p className='text-blue-500 text-xl  font-bold  flex justify-center items-center w-full '>
+                      View Details
                     </p>
-                    
                   </Link>
                 </div>
               </div>

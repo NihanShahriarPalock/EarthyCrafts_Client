@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../hooks/UseAuth";
 import Swal from "sweetalert2";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 
@@ -46,7 +46,7 @@ const MyCraft = () => {
                 icon: "success",
               });
             }
-            toast.success("Data Deleted Successfully")
+            toast.success("Data Deleted Successfully");
 
             setControl(!control);
           });

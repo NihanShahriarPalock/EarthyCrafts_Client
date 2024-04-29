@@ -6,7 +6,7 @@ const Footer = () => {
           <div className='container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap'>
             <div className='flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left'>
               <a className='flex items-center justify-center font-medium title-font md:justify-start'>
-                <p>Earthly Crafts</p>
+                <p className="dark:text-red-800 text-yellow-400">Earthly Crafts</p>
               </a>
               <p className='mt-2 text-sm  text-gray-600'>
                 Crafting Nature&#39;s Touch in Time
