@@ -1,6 +1,7 @@
 import { useEffect, useState  } from "react";
 import {  useParams } from "react-router-dom";
-
+import { toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 const UpdateCraft = () => {
   const { id } = useParams();
     const [craft, setCraft] = useState({});
@@ -43,7 +44,26 @@ const UpdateCraft = () => {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Product Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Updated",
+          });
+        } else {
+         
+          toast.error("Data is not updated");
+        }
+      })
+      .catch(() => {
+       
+        toast.error("Error updating craft");
+      });
     
   };
 
