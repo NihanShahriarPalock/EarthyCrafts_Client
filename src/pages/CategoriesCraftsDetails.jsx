@@ -17,7 +17,7 @@ const CategoriesCraftsDetails = () => {
   return (
     <>
       <Helmet>
-        <title>Earthly | Craft Details</title>
+        <title>Earthly | Category Details</title>
       </Helmet>
       <div className='flex flex-col md:flex-row gap-4 mt-6 p-6'>
         <div className='w-full md:w-1/2 flex justify-center items-center'>

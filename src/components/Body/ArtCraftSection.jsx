@@ -35,16 +35,11 @@ const ArtCraftSection = () => {
               <div className='space-y-3 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
                 <p className='text-lg font-semibold'>{craft.item_name}</p>
                 <p className=''>Sub Category Name : {craft.subcategory_Name}</p>
-                <p className=''>
-                  Stock Status :
-                  <span className='italic'> {craft.stockStatus} </span>
-                </p>
+                
                 <p className=' '>
                   Price : <span className='italic'>{craft.price} </span>
                 </p>
-                <p className='  '>
-                  Rating : <span className='italic'>{craft.rating}</span>
-                </p>
+               
 
                 <div className='flex gap-2 w-full btn border border-blue-500'>
                   <Link to={`/categoriesCraftsDetails/${craft._id}`}>

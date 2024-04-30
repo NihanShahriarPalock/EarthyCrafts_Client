@@ -24,7 +24,7 @@ const Registration = () => {
     const imageURL = form?.imageURL.value;
     const email = form?.email.value;
     const password = form?.password.value;
-    // console.log(name, imageURL, email, password);
+   
 
     if (password.length < 6) {
       toast.error("password must be have at least 6 characters");
@@ -72,7 +72,7 @@ const Registration = () => {
 
       <div>
         <h1 className='mt-10 backdrop-blur-sm text-4xl text-center pb-5'>
-          Register Form
+          Registration Form
         </h1>
         <p className='pb-2 text-center text-gray-400'>
           Fill up all the information to register

@@ -12,7 +12,6 @@ const Navbar = () => {
    const navigate = useNavigate();
 
  
-
   const handleLogOut = () => {
     logOut()
       .then(() => toast.success("successfully Logout"))
@@ -142,9 +141,7 @@ const Navbar = () => {
                 <div className='flex'>
                   {" "}
                   <span className='z-50 relative'>Login</span>
-                  {/* <span className='z-50 relative pl-2 pt-1 text-xl'>
-                    <VscAccount />
-                  </span> */}
+                 
                 </div>
               </button>
 
@@ -154,9 +151,7 @@ const Navbar = () => {
                 <div className='flex'>
                   {" "}
                   <span className='z-50 relative'>Registration</span>
-                  {/* <span className='z-50 relative pl-2 pt-1 text-xl'>
-                    <VscAccount />
-                  </span> */}
+                  
                 </div>
               </button>
             </div>
