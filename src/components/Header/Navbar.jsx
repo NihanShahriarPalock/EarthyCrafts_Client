@@ -140,7 +140,7 @@ const Navbar = () => {
                 className=' hover:before:bg-red rounded-lg  relative h-[50px] w-full border-2 bg-green-400 border-green-500 sm:px-2 md:px-5 py-3 text-black transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:h-full before:w-0 before:bg-green-600 before:transition-all before:duration-500 hover:text-white  hover:before:left-0 hover:before:w-full'>
                 <div className='flex'>
                   {" "}
-                  <span className='z-50 relative'>SignIn</span>
+                  <span className='z-50 relative'>Login</span>
                  
                 </div>
               </button>
@@ -150,7 +150,7 @@ const Navbar = () => {
                 className=' hover:before:bg-red rounded-lg  relative h-[50px] w-full border-2 bg-green-400 border-green-500 px-2 md:px-5 py-3 text-black transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:h-full before:w-0 before:bg-green-600 before:transition-all before:duration-500 hover:text-white  hover:before:left-0 hover:before:w-full'>
                 <div className='flex'>
                   {" "}
-                  <span className='z-50 relative'>SignUp</span>
+                  <span className='z-50 relative'>Register</span>
                   
                 </div>
               </button>

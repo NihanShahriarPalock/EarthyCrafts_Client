@@ -45,13 +45,13 @@ export const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoutes>
         ),
-        // loader: () => fetch("https://jute-craft-server.vercel.app/AllArtAndCraft"),
+        
       },
 
       {
         path: "/categoriesCraftsDetails/:id",
         element: <CategoriesCraftsDetails></CategoriesCraftsDetails>,
-        // loader: () => fetch("https://jute-craft-server.vercel.app/categoriesCraftsDetails"),
+        
       },
 
       {
