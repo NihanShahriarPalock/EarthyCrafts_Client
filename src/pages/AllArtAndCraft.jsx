@@ -1,11 +1,9 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllArtAndCraft = () => {
   const crafts = useLoaderData();
-  const limitedCrafts = crafts.slice(0, 2);
-
+// ok
   return (
     <div className='container mx-auto px-4 py-8 bg-slate-50'>
       <Helmet>
@@ -25,7 +23,7 @@ const AllArtAndCraft = () => {
             </tr>
           </thead>
           <tbody>
-            {limitedCrafts.map((craft, index) => (
+            {crafts.map((craft, index) => (
               <tr
                 key={index}
                 className={index % 2 === 0 ? "bg-gray-300" : "bg-white"}>

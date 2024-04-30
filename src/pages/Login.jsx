@@ -78,9 +78,9 @@ const Login = () => {
       </Helmet>
       {loading && <Spinner />}
 
-      <div className='border shadow-lg mt-10'>
+      <div className='shadow-lg py-10 dark:bg-gray-700  '>
         <div className='w-full  flex'>
-          <div className='w-full lg:w-1/2 mx-auto bg-white p-5 rounded-lg lg:rounded-l-none'>
+          <div className='w-full lg:w-1/2 mx-auto bg-white dark:bg-gray-700  p-3 rounded-lg lg:rounded-l-none border border-red-200'>
             <div className=' p-5 '>
               <form onSubmit={handleLogin} className='space-y-3 w-full '>
                 <div className='flex justify-between mb-5'>
@@ -93,7 +93,7 @@ const Login = () => {
                   </div>
                   <div className='ml-8 divider lg:divider-horizontal'></div>
                   <div className='flex flex-col justify-center items-center'>
-                    <h1 className='backdrop-blur-sm text-4xl text-center pb-5'>
+                    <h1 className='backdrop-blur-sm text-4xl dark:text-gray-100 text-center pb-5'>
                       Login Form
                     </h1>
                     <p className='pb-10 text-center text-gray-400'>
@@ -103,29 +103,29 @@ const Login = () => {
                 </div>
                 <div>
                   <fieldset className='border border-solid border-gray-300 p-3 w-full rounded'>
-                    <legend className=' font-medium text-black/60'>
+                    <legend className=' font-medium text-black/60 dark:text-gray-200'>
                       Email
                     </legend>
                     <input
                       type='email'
                       name='email'
                       id=''
-                      placeholder='Email'
-                      className='px-4 py-1 w-full focus:outline-0'
+                      placeholder='Enter authorized Email'
+                      className='px-4 py-1 w-full dark:bg-gray-700 focus:outline-0'
                     />
                   </fieldset>
                 </div>
                 <div>
                   <fieldset className='border border-solid border-gray-300 p-3 w-full rounded'>
-                    <legend className=' font-medium text-black/60'>
+                    <legend className=' font-medium text-black/60 dark:text-gray-200'>
                       Password
                     </legend>
                     <input
                       type='password'
                       name='password'
                       id=''
-                      placeholder='password'
-                      className='px-4 py-1 w-full focus:outline-0'
+                      placeholder='Enter verified Password'
+                      className='px-4 py-1 w-full dark:bg-gray-700 focus:outline-0'
                     />
                   </fieldset>
                 </div>
@@ -137,7 +137,7 @@ const Login = () => {
 
               <div className='mt-4 flex items-center space-x-1'>
                 <div className='flex-1 h-px sm:w-16 bg-gray-300'></div>
-                <p className='px-3 text-sm text-gray-600'>
+                <p className='px-3 text-sm text-gray-600 dark:text-gray-200'>
                   Login with social accounts
                 </p>
                 <div className='flex-1 h-px sm:w-16 bg-gray-300'></div>
@@ -148,7 +148,7 @@ const Login = () => {
                   onClick={() => handleGoogleSignIn()}
                   aria-label='Login with Google'
                   type='button'
-                  className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-default-600'>
+                  className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-default-600 dark:text-gray-200'>
                   <svg className='w-4' viewBox='0 0 533.5 544.3'>
                     <path
                       d='M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z'
@@ -174,7 +174,7 @@ const Login = () => {
                   onClick={() => handleGithubSignIn()}
                   aria-label='Login with GitHub'
                   role='button'
-                  className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-default-600'>
+                  className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-default-600 dark:text-gray-200'>
                   <svg className='w-6' viewBox='0 0 32 32'>
                     <path
                       fillRule='evenodd'
@@ -184,11 +184,11 @@ const Login = () => {
                   <p>Login with GitHub</p>
                 </button>
               </div>
-              <p className='text-sm text-center sm:px-6 text-gray-600'>
+              <p className='text-sm text-center sm:px-6 text-gray-600 dark:text-gray-200'>
                 Don&#x27;t have an account?
                 <Link
                   to='/registration'
-                  className='ml-2 text-blue-800 hover:underline underline-offset-4'>
+                  className='ml-2 text-blue-800 dark:text-blue-500 hover:underline underline-offset-4'>
                   Click to Register
                 </Link>
               </p>

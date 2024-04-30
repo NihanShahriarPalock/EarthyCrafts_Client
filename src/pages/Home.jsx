@@ -5,9 +5,7 @@ import HeroSlider from "../components/Header/HeroSlider";
 import Partner from "../components/Body/Partner";
 import MeetTeam from "../components/Body/MeetTeam";
 import CraftItemsSection from "../components/Body/CraftItemsSection";
-
 import { Helmet } from "react-helmet-async";
-import ArtCraftSection from "../components/Body/ArtCraftSection";
 import ArtCraftCard from "../components/Body/ArtCraftCard";
 
 const Home = () => {

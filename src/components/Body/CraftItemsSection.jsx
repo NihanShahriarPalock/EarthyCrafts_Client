@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 const CraftItemSection = () => {
@@ -20,14 +21,14 @@ const CraftItemSection = () => {
   }, []);
 
   return (
-    <div className='my-5 container mx-auto px-4 py-8 bg-slate-50'>
-      <h2 className='text-2xl font-bold mb-4 text-center text-black py-4'>
-        Art and Craft Items
+    <div className=' container mx-auto px-4 py-8 md:py-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
+      <h2 className='text-2xl lg:text-4xl font-bold mb-4 text-center  pb-8'>
+        <Fade duration={2000}>Art and Craft Items</Fade>
       </h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {limitedCrafts.map((craft, index) => (
           <div key={index} className='relative mx-auto w-full'>
-            <div className='shadow-md p-4 rounded-lg bg-white'>
+            <div className='shadow-md p-4 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
               <div className='flex justify-center relative rounded-lg overflow-hidden h-52'>
                 <div className='w-full'>
                   <img
@@ -37,14 +38,12 @@ const CraftItemSection = () => {
                   />
                 </div>
               </div>
-              <div className='space-y-3 text-gray-800'>
+              <div className='space-y-3 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
                 <p className='text-lg font-semibold'>{craft.item_name}</p>
-                <p className=''>
-                  Sub Category Name : {craft.subcategory_Name}
-                </p>
+                <p className=''>Sub Category Name : {craft.subcategory_Name}</p>
                 <p className=''>
                   Stock Status :
-                   <span className='italic'> {craft.stockStatus} </span>
+                  <span className='italic'> {craft.stockStatus} </span>
                 </p>
                 <p className=' '>
                   Price : <span className='italic'>{craft.price} </span>

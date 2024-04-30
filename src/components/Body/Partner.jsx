@@ -2,9 +2,11 @@ import Marquee from "react-fast-marquee";
 
 const Partner = () => {
   return (
-    <>
-      <h2 className='my-5 md:my-10 text-center font-bold text-2xl md:text-4xl'>Our Partners</h2>
-      <div className='w-full h-40 flex items-center justify-center shadow-2xl'>
+    <div className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
+      <h2 className='p-4 md:p-10 text-center font-bold text-2xl lg:text-4xl'>
+        Our Partners
+      </h2>
+      <div className=' w-full h-40 flex items-center justify-center shadow-2xl'>
         <Marquee speed={70}>
           <img
             className='mr-10 h-28'
@@ -53,7 +55,7 @@ const Partner = () => {
           />
         </Marquee>
       </div>
-    </>
+    </div>
   );
 };
 

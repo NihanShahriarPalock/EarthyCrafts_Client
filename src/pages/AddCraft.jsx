@@ -161,7 +161,7 @@ const AddCraft = () => {
           <label>
             <input
               type='radio'
-              value='yes'
+              value='Yes'
               className='input-radio mx-2'
               name='customization'
             />
@@ -170,7 +170,7 @@ const AddCraft = () => {
           <label className='ml-3'>
             <input
               type='radio'
-              value='no'
+              value='No'
               className='input-radio mx-2'
               name='customization'
             />
@@ -186,7 +186,7 @@ const AddCraft = () => {
           <label>
             <input
               type='radio'
-              value='madeToOrder'
+              value='Made to Order'
               className='input-radio mx-2'
               name='stockStatus'
             />
@@ -195,7 +195,7 @@ const AddCraft = () => {
           <label className='ml-3'>
             <input
               type='radio'
-              value='inStock'
+              value='In Stock'
               className='input-radio mx-2'
               name='stockStatus'
             />

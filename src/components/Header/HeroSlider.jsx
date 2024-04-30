@@ -5,6 +5,8 @@ import "swiper/css/bundle";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import { Bounce } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 
 const HeroSlider = () => {
@@ -26,8 +28,8 @@ const HeroSlider = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className='mySwiper relative lg:h-[calc(100vh-90px)]'>
         <div className='absolute z-20 lg:left-1/2 transform lg:-translate-x-1/2 top-5 md:top-14 lg:top-1/4 flex flex-col items-center'>
-          <p className='text-black text-center font-bold text-3xl md:text-5xl'>
-            Welcome To Earthy Crafts
+          <p className='text-emerald-950 text-center font-bold text-3xl md:text-5xl'>
+            <Bounce duration='2000'> Welcome To Earthy Crafts</Bounce>
           </p>
           <p className='mt-6 text-center text-emerald-950 font-semibold text-4xl'>
             <Typewriter
@@ -40,12 +42,10 @@ const HeroSlider = () => {
               words={[
                 "Where Nature Inspires Creativity",
                 "Handcrafted with Love and Nature's Touch",
-                "Crafting Nature's Beauty into Art"
-                
+                "Crafting Nature's Beauty into Art",
               ]}
             />
           </p>
-         
         </div>
         <SwiperSlide>
           <div>

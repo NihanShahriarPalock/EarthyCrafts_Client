@@ -17,6 +17,7 @@ const MyCraft = () => {
         .then((res) => res.json())
         .then((data) => {
           setCrafts(data);
+          
         });
     }
   }, [user, control]);
@@ -47,7 +48,6 @@ const MyCraft = () => {
               });
             }
             toast.success("Data Deleted Successfully");
-
             setControl(!control);
           });
       }
@@ -78,8 +78,8 @@ const MyCraft = () => {
           value={filterValue}
           onChange={handleFilterChange}>
           <option value='all'>Show All Product</option>
-          <option value='yes'>Customized</option>
-          <option value='no'>Non-customized</option>
+          <option value='Yes'>Customized</option>
+          <option value='No'>Non-customized</option>
         </select>
       </div>
 
@@ -115,7 +115,7 @@ const MyCraft = () => {
                   <span className='text-gray-600 mr-1'>Customization : </span>
                   <span
                     className={`${
-                      p.customization === "yes"
+                      p.customization === "Yes"
                         ? "text-green-500"
                         : "text-red-500"
                     }`}>

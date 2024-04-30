@@ -11,6 +11,7 @@ import MyCraft from "../pages/MyCraft";
 import ViewDetails from "../pages/ViewDetails";
 import UpdateCraft from "../pages/UpdateCraft";
 import ArtCraftSection from "../components/Body/ArtCraftSection";
+import CategoriesCraftsDetails from "../pages/CategoriesCraftsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -43,8 +44,15 @@ export const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
+        // loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
       },
+
+      {
+        path: "/categoriesCraftsDetails/:id",
+        element: <CategoriesCraftsDetails></CategoriesCraftsDetails>,
+        // loader: () => fetch("http://localhost:5000/categoriesCraftsDetails"),
+      },
+
       {
         path: "/AddCraft",
         element: (

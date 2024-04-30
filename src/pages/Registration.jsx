@@ -16,34 +16,7 @@ const Registration = () => {
    
   } = UseAuth() || {};
 
-  // google sign in
-  // const handleGoogleSignIn = () => {
-  //   googleSignIn()
-  //     .then((result) => {
-  //       setLoading(false);
-  //       navigate(location?.state ? location.state : "/");
-  //       toast.success("Login successful");
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       toast.error(err.message);
-  //     });
-  // };
-  // github sign in
-  // const handleGithubSignIn = () => {
-  //   githubSignIn()
-  //     .then((result) => {
-  //       setLoading(false);
-  //       navigate(location?.state ? location.state : "/");
-  //       toast.success("Login successful");
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       toast.error(err.message);
-  //     });
-  // };
 
-  // Handle SignUp Email Password
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;

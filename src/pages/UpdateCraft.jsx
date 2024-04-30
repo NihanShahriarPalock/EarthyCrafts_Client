@@ -56,6 +56,7 @@ const UpdateCraft = () => {
             icon: "success",
             confirmButtonText: "Updated",
           });
+          // toast.success("Data is updated");
         } else {
          
           toast.error("Data is not updated");
@@ -178,7 +179,7 @@ const UpdateCraft = () => {
           <label>
             <input
               type='radio'
-              value='yes'
+              value='Yes'
               className='input-radio mx-2'
               name='customization'
             />
@@ -187,7 +188,7 @@ const UpdateCraft = () => {
           <label className='ml-3'>
             <input
               type='radio'
-              value='no'
+              value='No'
               className='input-radio mx-2'
               name='customization'
             />

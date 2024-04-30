@@ -1,19 +1,19 @@
 const Footer = () => {
   return (
-    <div>
+    <div className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
       <div className='flex items-end w-full '>
         <footer className='w-full '>
           <div className='container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap'>
             <div className='flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left'>
               <a className='flex items-center justify-center font-medium title-font md:justify-start'>
-                <p className="dark:text-red-800 text-yellow-400">Earthly Crafts</p>
+                <p className='text-2xl'>Earthly Crafts</p>
               </a>
-              <p className='mt-2 text-sm  text-gray-600'>
+              <p className='mt-2 text-sm  '>
                 Crafting Nature&#39;s Touch in Time
               </p>
               <div className='mt-4'>
                 <span className='inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start'>
-                  <a className=' text-gray-600 cursor-pointer hover:text-gray-700  '>
+                  <a className='  cursor-pointer   '>
                     <svg
                       fill='currentColor'
                       strokeLinecap='round'
@@ -24,7 +24,7 @@ const Footer = () => {
                       <path d='M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z'></path>
                     </svg>
                   </a>
-                  <a className='ml-3  text-gray-600 cursor-pointer hover:text-gray-700'>
+                  <a className='ml-3  cursor-pointer '>
                     <svg
                       fill='currentColor'
                       strokeLinecap='round'
@@ -35,7 +35,7 @@ const Footer = () => {
                       <path d='M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z'></path>
                     </svg>
                   </a>
-                  <a className='ml-3  text-gray-600 cursor-pointer hover:text-gray-700'>
+                  <a className='ml-3  cursor-pointer '>
                     <svg
                       fill='none'
                       stroke='currentColor'
@@ -74,78 +74,78 @@ const Footer = () => {
             </div>
             <div className='flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left'>
               <div className='w-full px-4 lg:w-1/4 md:w-1/2'>
-                <h2 className='mb-3 text-sm font-medium tracking-widest text-gray-600 uppercase title-font underline underline-offset-4'>
+                <h2 className='mb-3 text-sm font-medium tracking-widest  uppercase title-font underline underline-offset-4'>
                   About
                 </h2>
                 <nav className='mb-10 list-none'>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>Company</a>
+                    <a className='  cursor-pointer  '>Company</a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>Careers</a>
+                    <a className='  cursor-pointer  '>Careers</a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>Blog</a>
+                    <a className='  cursor-pointer  '>Blog</a>
                   </li>
                 </nav>
               </div>
               <div className='w-full px-4 lg:w-1/4 md:w-1/2'>
-                <h2 className='mb-3 text-sm font-medium tracking-widest text-gray-600 uppercase title-font underline underline-offset-4'>
+                <h2 className='mb-3 text-sm font-medium tracking-widest  uppercase title-font underline underline-offset-4'>
                   Support
                 </h2>
                 <nav className='mb-10 list-none'>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>
+                    <a className='  cursor-pointer  '>
                       Contact Support
                     </a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>
+                    <a className='  cursor-pointer  '>
                       Help Resources
                     </a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>
+                    <a className='  cursor-pointer  '>
                       Release Updates
                     </a>
                   </li>
                 </nav>
               </div>
               <div className='w-full px-4 lg:w-1/4 md:w-1/2'>
-                <h2 className='mb-3 text-sm font-medium tracking-widest text-gray-600 uppercase title-font underline underline-offset-4'>
+                <h2 className='mb-3 text-sm font-medium tracking-widest uppercase title-font underline underline-offset-4'>
                   Platform
                 </h2>
                 <nav className='mb-10 list-none'>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>
+                    <a className='  cursor-pointer  '>
                       Terms &amp; Privacy
                     </a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>Pricing</a>
+                    <a className='  cursor-pointer  '>Pricing</a>
                   </li>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-pointer  '>FAQ</a>
+                    <a className='  cursor-pointer  '>FAQ</a>
                   </li>
                 </nav>
               </div>
               <div className='w-full px-4 lg:w-1/4 md:w-1/2'>
-                <h2 className='mb-3 text-sm font-medium tracking-widest text-gray-600 uppercase title-font underline underline-offset-4'>
+                <h2 className='mb-3 text-sm font-medium tracking-widest uppercase title-font underline underline-offset-4'>
                   Contact Information
                 </h2>
                 <nav className='mb-10 list-none '>
                   <p className='mt-3'>
-                    <span className=' text-gray-600  cursor-default  '>
+                    <span className='  cursor-default  '>
                       Dhaka Branch
                     </span>
                   </p>
                   <li className='mt-3'>
-                    <a className=' text-gray-600 cursor-default  '>
+                    <a className='  cursor-default  '>
                       Sector-13, Road-9, Uttara
                     </a>
                   </li>
                   <li className='mt-3'>
-                    <a className='text-gray-600 cursor-default  '>
+                    <a className='cursor-default  '>
                       +880 16312-35014
                     </a>
                   </li>
@@ -153,12 +153,12 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='bg-gray-300'>
+          <div className='bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-300'>
             <div className='container px-5 py-4 mx-auto'>
-              <p className='text-sm text-gray-700 capitalize xl:text-center'>
+              <p className='text-sm  capitalize xl:text-center'>
                 © 2024 All rights reserved to - Earthly Crafts
               </p>
-              <p className='text-sm text-gray-700 capitalize xl:text-center'>
+              <p className='text-sm capitalize xl:text-center'>
                 Developed By - Nihan Shahriar
               </p>
             </div>

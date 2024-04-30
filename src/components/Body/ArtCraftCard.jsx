@@ -1,24 +1,28 @@
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 const ArtCraftCard = () => {
   return (
-    <>
-      <div className='relative pt-2  min-h-screen'>
+    <div className='bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
+      <h2 className='text-center  font-bold text-2xl lg:text-4xl'>
+        <Fade duration={2000}>Art & Craft Categories</Fade>
+      </h2>
+      <div className='relative   min-h-screen'>
         <div className='bg-cover w-full flex justify-center items-center'>
-          <div className='w-full bg-white p-5  bg-opacity-40 backdrop-filter backdrop-blur-lg'>
-            <div className='w-12/12 mx-auto rounded-2xl bg-white p-5 bg-opacity-40 backdrop-filter backdrop-blur-lg'>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center p-5 mx-auto border-2 rounded-2xl '>
+          <div className='w-full p-5  bg-opacity-40 '>
+            <div className='w-12/12 mx-auto rounded-2xl bg-white dark:bg-gray-900 p-5 bg-opacity-40 '>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center p-5 mx-auto border-2 dark:border-none rounded-2xl '>
                 {/* Wooden Furniture & Sculptures */}
                 <Link to='/ArtCraftSection/WoodenFurnitureSculptures'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/YNMxWLJ/Wooden-Furniture-Sculptures.jpg'
                         alt=''
                       />
 
-                      <span className='flex justify-center items-center bg-gray-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100'>
+                      <span className='flex justify-center items-center bg-gray-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white  rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100'>
                         Click to visit this category
                         <svg
                           className='ml-2 w-6 h-6'
@@ -44,11 +48,11 @@ const ArtCraftCard = () => {
                 </Link>
                 {/* Wooden Home Decor */}
                 <Link to='/ArtCraftSection/WoodenHomeDecor'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/MZWdMfy/wooden-home-decor-1.jpg'
                         alt=''
                       />
 
@@ -78,11 +82,11 @@ const ArtCraftCard = () => {
                 </Link>
                 {/* Wooden Utensils and Kitchenware  */}
                 <Link to='/ArtCraftSection/WoodenUtensilsKitchenware'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900   p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/wNyW27X/Wooden-Utensils-and-Kitchenware.webp'
                         alt=''
                       />
 
@@ -112,11 +116,11 @@ const ArtCraftCard = () => {
                 </Link>
                 {/* Jute Home Decor  */}
                 <Link to='/ArtCraftSection/JuteHomeDecor'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900   p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/TPCBW1h/Jute-Home-Decor.jpg'
                         alt=''
                       />
 
@@ -146,11 +150,11 @@ const ArtCraftCard = () => {
                 </Link>
                 {/* Jute Kitchenware & utensils */}
                 <Link to='/ArtCraftSection/JuteKitchenwareUtensils'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/k54XRRV/jute-kitchen.jpg'
                         alt=''
                       />
 
@@ -180,11 +184,11 @@ const ArtCraftCard = () => {
                 </Link>
                 {/* Jute and wooden jewellery */}
                 <Link to='/ArtCraftSection/JuteWoodenJewellery'>
-                  <article className='bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
+                  <article className='bg-white dark:bg-gray-900  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border'>
                     <div className='relative mb-4 rounded-2xl'>
                       <img
                         className='max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105'
-                        src='https://images.pexels.com/photos/163097/twitter-social-media-communication-internet-network-163097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        src='https://i.ibb.co/brxPLr8/wood.jpg'
                         alt=''
                       />
 
@@ -217,7 +221,7 @@ const ArtCraftCard = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

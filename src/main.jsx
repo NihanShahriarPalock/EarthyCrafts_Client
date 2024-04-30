@@ -7,7 +7,8 @@ import AuthContextProvider from './firebase/AuthContextProvider.jsx';
 import { ToastContainer } from 'react-toastify';
 import { Toaster } from 'react-hot-toast';
 import { HelmetProvider } from 'react-helmet-async';
-import { Typewriter } from 'react-simple-typewriter';
+
+
 
 
 
@@ -18,7 +19,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <RouterProvider router={router} />
         <ToastContainer></ToastContainer>
         <Toaster />
-        <Typewriter />
+      
+          
       </HelmetProvider>
     </AuthContextProvider>
   </React.StrictMode>

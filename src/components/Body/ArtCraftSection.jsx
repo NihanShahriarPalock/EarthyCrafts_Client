@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const ArtCraftSection = () => {
@@ -12,31 +12,47 @@ const ArtCraftSection = () => {
     fetch(`http://localhost:5000/subCategory/${subcategory_Name}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("Data:", data);
+        
         setCrafts(data);
       });
   }, [subcategory_Name]); 
 
   return (
-    <div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8'>
-        {crafts.map((p, index) => (
+    <div className=' '>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8'>
+        {crafts.map((craft, index) => (
           <div key={index} className='relative mx-auto w-full'>
-            <div className='shadow-md p-4 rounded-lg bg-white'>
+            <div className='shadow-2xl p-4 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
               <div className='flex justify-center relative rounded-lg overflow-hidden h-52'>
                 <div className='w-full'>
                   <img
-                    src={p.image}
+                    src={craft.image}
                     alt='Image'
                     className='object-cover w-full h-52'
                   />
                 </div>
               </div>
-              <div className='space-y-3'>
-                <h3 className='text-xl font-semibold'>{p.item_name}</h3>
-                <p className='text-gray-600'>
-                  Sub Category Name: {p.subcategory_Name}
+              <div className='space-y-3 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300'>
+                <p className='text-lg font-semibold'>{craft.item_name}</p>
+                <p className=''>Sub Category Name : {craft.subcategory_Name}</p>
+                <p className=''>
+                  Stock Status :
+                  <span className='italic'> {craft.stockStatus} </span>
                 </p>
+                <p className=' '>
+                  Price : <span className='italic'>{craft.price} </span>
+                </p>
+                <p className='  '>
+                  Rating : <span className='italic'>{craft.rating}</span>
+                </p>
+
+                <div className='flex gap-2 w-full btn border border-blue-500'>
+                  <Link to={`/categoriesCraftsDetails/${craft._id}`}>
+                    <p className='text-blue-500 text-xl  font-bold  flex justify-center items-center w-full '>
+                      View Details
+                    </p>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
