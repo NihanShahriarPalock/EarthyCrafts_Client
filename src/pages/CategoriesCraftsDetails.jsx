@@ -8,7 +8,7 @@ const CategoriesCraftsDetails = () => {
 
   console.log(id);
   useEffect(() => {
-    fetch(`http://localhost:5000/categoriesCraftsDetails/${id}`)
+    fetch(`https://jute-craft-server.vercel.app/categoriesCraftsDetails/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCraft(data);
@@ -78,7 +78,6 @@ const CategoriesCraftsDetails = () => {
               <h1> {craft.processing_time}</h1>
             </div>
           </div>
-          
         </div>
       </div>
     </>

@@ -13,11 +13,10 @@ const MyCraft = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/MyCraft/${user.email}`)
+      fetch(`https://jute-craft-server.vercel.app/MyCraft/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setCrafts(data);
-          
         });
     }
   }, [user, control]);
@@ -34,7 +33,7 @@ const MyCraft = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/MyCraft/${_id}`, {
+        fetch(`https://jute-craft-server.vercel.app/MyCraft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

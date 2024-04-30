@@ -8,7 +8,7 @@ const ViewDetails = () => {
 
   console.log(id);
   useEffect(() => {
-    fetch(`http://localhost:5000/singleCraft/${id}`)
+    fetch(`https://jute-craft-server.vercel.app/singleCraft/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCraft(data);

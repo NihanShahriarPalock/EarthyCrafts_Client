@@ -8,7 +8,9 @@ const CraftItemSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/AllArtAndCraft");
+        const response = await fetch(
+          "https://jute-craft-server.vercel.app/AllArtAndCraft"
+        );
         const data = await response.json();
         const slicedCrafts = data.slice(0, 6);
         setLimitedCrafts(slicedCrafts);

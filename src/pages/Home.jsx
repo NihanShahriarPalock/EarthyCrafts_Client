@@ -14,7 +14,7 @@ const Home = () => {
     setLoadingScreen(true);
     setTimeout(() => {
       setLoadingScreen(false);
-    }, 2000);
+    }, 1000);
   }, []);
   return (
     <div>

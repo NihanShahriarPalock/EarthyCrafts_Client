@@ -1,22 +1,20 @@
-import { useEffect, useState  } from "react";
-import {  useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 const UpdateCraft = () => {
   const { id } = useParams();
-    const [craft, setCraft] = useState({});
-    
+  const [craft, setCraft] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleCraft/${id}`)
+    fetch(`https://jute-craft-server.vercel.app/singleCraft/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCraft(data);
       });
   }, [id]);
 
- 
   const handleUpdateCraft = (e) => {
     e.preventDefault();
     const item_name = e.target.item_name.value;
@@ -41,7 +39,7 @@ const UpdateCraft = () => {
       stockStatus,
     };
     console.log(info);
-    fetch(`http://localhost:5000/updateCraft/${id}`, {
+    fetch(`https://jute-craft-server.vercel.app/updateCraft/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
@@ -58,19 +56,13 @@ const UpdateCraft = () => {
           });
           // toast.success("Data is updated");
         } else {
-         
           toast.error("Data is not updated");
         }
       })
       .catch(() => {
-       
         toast.error("Error updating craft");
       });
-    
   };
-
-
- 
 
   return (
     <div className='w-full lg:w-3/4  mx-auto my-10'>

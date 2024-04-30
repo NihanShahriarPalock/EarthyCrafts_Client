@@ -34,7 +34,8 @@ export const router = createBrowserRouter([
       {
         path: "/AllArtAndCraft",
         element: <AllArtAndCraft></AllArtAndCraft>,
-        loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
+        loader: () =>
+          fetch("https://jute-craft-server.vercel.app/AllArtAndCraft"),
       },
 
       {
@@ -44,13 +45,13 @@ export const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoutes>
         ),
-        // loader: () => fetch("http://localhost:5000/AllArtAndCraft"),
+        // loader: () => fetch("https://jute-craft-server.vercel.app/AllArtAndCraft"),
       },
 
       {
         path: "/categoriesCraftsDetails/:id",
         element: <CategoriesCraftsDetails></CategoriesCraftsDetails>,
-        // loader: () => fetch("http://localhost:5000/categoriesCraftsDetails"),
+        // loader: () => fetch("https://jute-craft-server.vercel.app/categoriesCraftsDetails"),
       },
 
       {

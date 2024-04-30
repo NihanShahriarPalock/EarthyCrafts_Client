@@ -35,7 +35,7 @@ const AddCraft = () => {
       displayName,
     };
     console.log(newCraft);
-    fetch("http://localhost:5000/addcraft", {
+    fetch("https://jute-craft-server.vercel.app/addcraft", {
       method: "POST",
       headers: {
         "content-type": "application/json",
